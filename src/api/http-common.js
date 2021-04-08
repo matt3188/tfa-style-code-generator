@@ -1,7 +1,10 @@
 import axios from 'axios'
 
 export default axios.create({
-  baseURL: process.env.API_URL || 'http://localhost:3000',
+  baseURL:
+    process.env.NODE_ENV === 'production'
+      ? process.env.VUE_APP_API_URL
+      : 'http://localhost:3000',
   withCredentials: false,
   headers: {
     'Access-Control-Allow-Origin': '*',
