@@ -1,0 +1,7 @@
+export const SET_ACCESSORY = 'SET_ACCESSORY'
+export const SET_CATEGORY = 'SET_CATEGORY'
+export const SET_GARMENT = 'SET_GARMENT'
+export const SET_SEASON = 'SET_SEASON'
+export const SET_CLUB = 'SET_CLUB'
+export const SET_YEAR = 'SET_YEAR'
+export const EMPTY_SELECTIONS = 'EMPTY_SELECTIONS'
