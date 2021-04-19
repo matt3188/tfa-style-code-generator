@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["profile"],{c66d:function(e,t,u){"use strict";u.r(t);var r=function(){var e=this,t=e.$createElement,u=e._self._c||t;return u("div",[u("div",[u("img",{attrs:{src:e.$auth.user.picture}}),u("h2",[e._v(e._s(e.$auth.user.name))]),u("p",[e._v(e._s(e.$auth.user.email))])]),u("div",[u("pre",[e._v(e._s(JSON.stringify(e.$auth.user,null,2)))])])])},s=[],n=u("2877"),i={},a=Object(n["a"])(i,r,s,!1,null,null,null);t["default"]=a.exports}}]);
+//# sourceMappingURL=profile.b756d43a.js.map
