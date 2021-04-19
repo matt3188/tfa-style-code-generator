@@ -15,7 +15,7 @@
         </div>
         <div v-else>
           <p class="title">Welcome to T&amp;F's<br />style code generator</p>
-          <p class="subtitle">Please sign in</p>
+          <p class="subtitle">Please log in</p>
         </div>
       </div>
     </div>
@@ -24,12 +24,6 @@
 
 <script>
 export default {
-  name: 'Home',
-  methods: {
-    // Log the user in
-    login() {
-      this.$auth.loginWithRedirect()
-    }
-  }
+  name: 'Home'
 }
 </script>
