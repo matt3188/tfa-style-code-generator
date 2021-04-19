@@ -11,6 +11,10 @@ const routes = [
     component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue')
   },
   {
+    path: '/tfa-style-code-generator/',
+    redirect: '/'
+  },
+  {
     path: '/profile',
     name: 'Profile',
     component: () =>
