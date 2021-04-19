@@ -1,3 +1,4 @@
+export const SET_ALL = 'SET_ALL'
 export const SET_ACCESSORY = 'SET_ACCESSORY'
 export const SET_CATEGORY = 'SET_CATEGORY'
 export const SET_GARMENT = 'SET_GARMENT'

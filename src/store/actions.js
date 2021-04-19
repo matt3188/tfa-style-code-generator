@@ -1,6 +1,11 @@
-// import StyleCodeService from "@/services/StyleCodeService";
+import StyleCodeService from '@/api/StyleCodeService'
 
 export const actions = {
+  getAll({ commit }) {
+    StyleCodeService.getAll().then(res => {
+      commit('SET_ALL', res.data)
+    })
+  },
   updateAccessory({ commit }, payload) {
     commit('SET_ACCESSORY', payload)
   },

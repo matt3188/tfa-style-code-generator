@@ -1,17 +1,23 @@
 <template>
-  <div>
-    <b-table :data="all" :columns="columns"></b-table>
-  </div>
+  <b-container>
+    <b-columns>
+      <b-column>
+        <b-button tag="router-link" to="/clothing/add" type="is-link">
+          Add Clothing
+        </b-button>
+        <b-table :data="garments" :columns="columns"></b-table>
+      </b-column>
+    </b-columns>
+  </b-container>
 </template>
 
 <script>
-import StyleCodeService from '@/api/StyleCodeService'
+import { mapState, mapGetters } from 'vuex'
 
 export default {
-  name: 'About',
+  name: 'Clothing',
   data() {
     return {
-      all: [],
       columns: [
         {
           field: 'styleCode',
@@ -20,10 +26,6 @@ export default {
         {
           field: 'garment',
           label: 'Garment'
-        },
-        {
-          field: 'accessory',
-          label: 'Accessory'
         },
         {
           field: 'club',
@@ -44,10 +46,9 @@ export default {
       ]
     }
   },
-  async mounted() {
-    this.all = await StyleCodeService.getAll().then(res => {
-      return res.data
-    })
+  computed: {
+    ...mapState(['all']),
+    ...mapGetters(['garments'])
   }
 }
 </script>

@@ -1,6 +1,9 @@
 import * as types from './mutation-types'
 
 export const mutations = {
+  [types.SET_ALL](state, payload) {
+    state.all = payload
+  },
   [types.SET_ACCESSORY](state, payload) {
     state.selections.accessorySelected = payload
   },
@@ -20,6 +23,13 @@ export const mutations = {
     state.selections.yearSelected = payload
   },
   [types.EMPTY_SELECTIONS](state) {
-    state.selections = {}
+    state.selections = {
+      accessorySelected: { name: '', value: '' },
+      categorySelected: { name: '', value: '' },
+      garmentSelected: { name: '', value: '' },
+      seasonSelected: { name: '', value: '' },
+      clubSelected: { name: '', value: '' },
+      yearSelected: { name: '', value: '' }
+    }
   }
 }

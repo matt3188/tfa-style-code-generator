@@ -1,10 +1,14 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/clothing">Clothing</router-link> |
+      <router-link to="/accessories">Accessories</router-link>
     </div>
     <router-view />
+    <footer>
+      <p>Made with ❤️ for T&amp;F Sports Aparell</p>
+      <p>By Matt Coleman</p>
+    </footer>
   </div>
 </template>
 
@@ -30,3 +34,17 @@
   }
 }
 </style>
+
+<script>
+import { mapActions } from 'vuex'
+
+export default {
+  name: 'App',
+  methods: {
+    ...mapActions(['getAll'])
+  },
+  mounted() {
+    this.getAll()
+  }
+}
+</script>
