@@ -10,7 +10,11 @@
         >
           Add Accessory
         </b-button>
-        <b-table class="mb-6" :data="accessories" :columns="columns"></b-table>
+        <Table :columnHeadings="columns" :data="accessories">
+          <template v-slot:actions="slotProps">
+            <TableActions :slotProps="slotProps" />
+          </template>
+        </Table>
       </b-column>
     </b-columns>
   </b-container>
@@ -18,9 +22,12 @@
 
 <script>
 import { mapState, mapGetters } from 'vuex'
+import Table from '@/components/Table'
+import TableActions from '@/components/TableActions'
 
 export default {
   name: 'Accessories',
+  components: { TableActions, Table },
   data() {
     return {
       columns: [

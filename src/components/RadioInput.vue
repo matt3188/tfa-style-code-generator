@@ -1,12 +1,12 @@
 <template>
   <b-field :label="localLabel" grouped group-multiline>
     <b-radio-button
-      v-model="model"
-      v-for="input in inputs"
       :key="input.name"
       :native-value="input"
-      type="is-primary"
       @input="changed"
+      type="is-primary"
+      v-for="input in inputs"
+      v-model="model"
     >
       {{ input.name }}
     </b-radio-button>
@@ -36,11 +36,6 @@ export default {
       this.$emit('changed', $event)
     },
     resetModel() {
-      this.model = ''
-    }
-  },
-  watch: {
-    success() {
       this.model = ''
     }
   }
