@@ -3,7 +3,7 @@
     <div class="content has-text-centered">
       <p>
         Made with<b-icon icon="heart" size="is-small" /> for T&amp;F Sports
-        Aparell<br />
+        Apparel<br />
         By Matt Coleman
       </p>
     </div>
