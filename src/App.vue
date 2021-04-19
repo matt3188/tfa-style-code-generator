@@ -1,14 +1,8 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/clothing">Clothing</router-link> |
-      <router-link to="/accessories">Accessories</router-link>
-    </div>
+    <TheNavBar />
     <router-view />
-    <footer>
-      <p>Made with ❤️ for T&amp;F Sports Aparell</p>
-      <p>By Matt Coleman</p>
-    </footer>
+    <TheFooter />
   </div>
 </template>
 
@@ -20,26 +14,19 @@
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
-  text-align: center;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.view {
+  min-height: 100vh;
 }
 </style>
 
 <script>
 import { mapActions } from 'vuex'
+import TheNavBar from '@/components/TheNavBar'
+import TheFooter from '@/components/TheFooter'
 
 export default {
   name: 'App',
+  components: { TheNavBar, TheFooter },
   methods: {
     ...mapActions(['getAll'])
   },

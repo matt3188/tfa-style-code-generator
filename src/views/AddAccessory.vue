@@ -2,36 +2,45 @@
   <b-container>
     <b-columns>
       <b-column>
-        <RadioInput
-          ref="ainput"
-          :inputs="accessories"
-          label="Accessories"
-          @changed="generateAccessoryNumber"
-        />
-        <RadioInput
-          ref="ainput1"
-          :inputs="clubs"
-          label="Clubs"
-          @changed="updateClub"
-        />
-        <b-field label="Product Description">
-          <b-input v-model="input" />
-        </b-field>
-        <RadioInput
-          ref="ainput2"
-          :inputs="seasons"
-          label="Seasons"
-          @changed="updateSeason"
-        />
-        <RadioInput
-          ref="ainput3"
-          :inputs="years"
-          label="Years"
-          @changed="updateYear"
-        />
-        <hr />
-        <h1>Style code: {{ generateAccesory }}</h1>
-        <b-button @click="createRecord()" type="is-primary"> Submit </b-button>
+        <h1 class="mb-5">Add Accessory</h1>
+        <form ref="form" @submit.prevent="createRecord">
+          <RadioInput
+            ref="ainput"
+            :inputs="accessories"
+            label="Accessories"
+            @changed="generateAccessoryNumber"
+          />
+          <RadioInput
+            ref="ainput1"
+            :inputs="clubs"
+            label="Clubs"
+            @changed="updateClub"
+          />
+          <b-field label="Product Description">
+            <b-input v-model="input" />
+          </b-field>
+          <RadioInput
+            ref="ainput2"
+            :inputs="seasons"
+            label="Seasons"
+            @changed="updateSeason"
+          />
+          <RadioInput
+            ref="ainput3"
+            :inputs="years"
+            label="Years"
+            @changed="updateYear"
+          />
+          <hr />
+          <h1>Style code: {{ generateAccesory }}</h1>
+          <b-button
+            class="mt-4"
+            tag="input"
+            native-type="submit"
+            value="Submit"
+            type="is-primary"
+          />
+        </form>
       </b-column>
     </b-columns>
   </b-container>

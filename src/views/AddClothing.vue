@@ -1,50 +1,55 @@
 <template>
-  <div>
-    <form ref="form" @submit.prevent="createRecord">
-      <RadioInput
-        ref="input"
-        :inputs="categories"
-        label="Categories"
-        @changed="updateCategory"
-      />
-      <RadioInput
-        ref="input1"
-        :inputs="garments"
-        label="Garments"
-        @changed="generateGarmentNumber"
-      />
-      <RadioInput
-        ref="input2"
-        :inputs="clubs"
-        label="Clubs"
-        @changed="updateClub"
-      />
-      <b-field label="Product Description">
-        <b-input v-model="input" />
-      </b-field>
-      <RadioInput
-        ref="input3"
-        :inputs="seasons"
-        label="Seasons"
-        @changed="updateSeason"
-      />
-      <RadioInput
-        ref="input4"
-        :inputs="years"
-        label="Years"
-        @changed="updateYear"
-      />
-      <hr />
-      <h1>Style code: {{ generateGarment }}</h1>
-      <b-button
-        class="mt-4"
-        tag="input"
-        native-type="submit"
-        value="Submit"
-        type="is-primary"
-      />
-    </form>
-  </div>
+  <b-container>
+    <b-columns>
+      <b-column>
+        <h1 class="mb-5">Add Clothing</h1>
+        <form ref="form" @submit.prevent="createRecord">
+          <RadioInput
+            ref="input"
+            :inputs="categories"
+            label="Categories"
+            @changed="updateCategory"
+          />
+          <RadioInput
+            ref="input1"
+            :inputs="garments"
+            label="Garments"
+            @changed="generateGarmentNumber"
+          />
+          <RadioInput
+            ref="input2"
+            :inputs="clubs"
+            label="Clubs"
+            @changed="updateClub"
+          />
+          <b-field label="Product Description">
+            <b-input v-model="input" />
+          </b-field>
+          <RadioInput
+            ref="input3"
+            :inputs="seasons"
+            label="Seasons"
+            @changed="updateSeason"
+          />
+          <RadioInput
+            ref="input4"
+            :inputs="years"
+            label="Years"
+            @changed="updateYear"
+          />
+          <hr />
+          <h1>Style code: {{ generateGarment }}</h1>
+          <b-button
+            class="mt-4"
+            tag="input"
+            native-type="submit"
+            value="Submit"
+            type="is-primary"
+          />
+        </form>
+      </b-column>
+    </b-columns>
+  </b-container>
 </template>
 
 <script>

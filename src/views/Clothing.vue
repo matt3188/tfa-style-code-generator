@@ -2,10 +2,15 @@
   <b-container>
     <b-columns>
       <b-column>
-        <b-button tag="router-link" to="/clothing/add" type="is-link">
+        <b-button
+          class="mt-4 mb-4"
+          tag="router-link"
+          to="/clothing/add"
+          type="is-link"
+        >
           Add Clothing
         </b-button>
-        <b-table :data="garments" :columns="columns"></b-table>
+        <b-table class="mb-6" :data="garments" :columns="columns"></b-table>
       </b-column>
     </b-columns>
   </b-container>
