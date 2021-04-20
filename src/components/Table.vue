@@ -72,7 +72,14 @@ export default {
      * Use a unique key of your data Object
      * when use detailed or opened detailed.
      */
-    detailKey: String
+    detailKey: String,
+    /**
+     * Loading
+     */
+    loading: {
+      type: Boolean,
+      default: false
+    }
   }
 }
 </script>

@@ -2,7 +2,11 @@
   <b-container>
     <b-columns>
       <b-column>
-        <Table :columnHeadings="columns" :data="accessories">
+        <Table
+          :columnHeadings="columns"
+          :data="accessories"
+          :loading="!accessories"
+        >
           <template v-slot:actions="slotProps">
             <TableActions :slotProps="slotProps" />
           </template>
