@@ -105,13 +105,13 @@ export default {
   },
   methods: {
     ...mapActions([
+      'emptySelections',
       'getAll',
       'updateCategory',
+      'updateClub',
       'updateGarment',
       'updateSeason',
-      'updateClub',
-      'updateYear',
-      'emptySelections'
+      'updateYear'
     ]),
     /**
      * Check value exists, return value or dash

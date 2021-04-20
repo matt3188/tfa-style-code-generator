@@ -1,10 +1,10 @@
 export const state = {
   all: [],
   selections: {
-    accessorySelected: {},
-    categorySelected: { name: 'Mens', value: 'M' },
-    garmentSelected: { name: '', value: '' },
+    accessorySelected: { name: '', value: '' },
+    categorySelected: { name: '', value: '' },
     clubSelected: { name: '', value: '' },
+    garmentSelected: { name: '', value: '' },
     seasonSelected: { name: '', value: '' },
     yearSelected: { name: '', value: '' }
   },

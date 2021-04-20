@@ -8,8 +8,13 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue')
+    component: () => import(/* webpackChunkName: "home" */ '@/views/Home.vue')
   },
+  /**
+   * Needed for Auth0
+   * For some reason we get redirected to
+   * /tfa-style-code-generator/tfa-style-code-generator/
+   */
   {
     path: '/tfa-style-code-generator/',
     redirect: '/'
@@ -18,28 +23,28 @@ const routes = [
     path: '/profile',
     name: 'Profile',
     component: () =>
-      import(/* webpackChunkName: "profile" */ '../views/Profile.vue'),
+      import(/* webpackChunkName: "profile" */ '@/views/Profile.vue'),
     beforeEnter: authGuard
   },
   {
     path: '/clothing',
     name: 'Clothing',
     component: () =>
-      import(/* webpackChunkName: "clothing" */ '../views/Clothing.vue'),
+      import(/* webpackChunkName: "clothing" */ '@/views/Clothing.vue'),
     beforeEnter: authGuard
   },
   {
     path: '/clothing/add',
     name: 'Add Clothing',
     component: () =>
-      import(/* webpackChunkName: "addClothing" */ '../views/AddClothing.vue'),
+      import(/* webpackChunkName: "addClothing" */ '@/views/AddClothing.vue'),
     beforeEnter: authGuard
   },
   {
     path: '/accessories',
     name: 'Accessories',
     component: () =>
-      import(/* webpackChunkName: "accessories" */ '../views/Accessories.vue'),
+      import(/* webpackChunkName: "accessories" */ '@/views/Accessories.vue'),
     beforeEnter: authGuard
   },
   {

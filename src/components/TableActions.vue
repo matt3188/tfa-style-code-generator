@@ -30,9 +30,7 @@ export default {
       })
     },
     deleteItem($event) {
-      console.log($event)
-      StyleCodeService.delete($event.id).then(res => {
-        console.log(res)
+      StyleCodeService.delete($event.id).then(() => {
         this.$buefy.toast.open({
           message: `${$event.styleCode} deleted`,
           type: 'is-success'
