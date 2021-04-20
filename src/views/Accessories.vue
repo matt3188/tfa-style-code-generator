@@ -2,14 +2,6 @@
   <b-container>
     <b-columns>
       <b-column>
-        <b-button
-          class="mt-4 mb-4"
-          tag="router-link"
-          to="/accessories/add"
-          type="is-link"
-        >
-          Add Accessory
-        </b-button>
         <Table :columnHeadings="columns" :data="accessories">
           <template v-slot:actions="slotProps">
             <TableActions :slotProps="slotProps" />

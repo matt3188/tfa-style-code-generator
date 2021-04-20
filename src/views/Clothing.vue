@@ -2,14 +2,6 @@
   <b-container>
     <b-columns>
       <b-column>
-        <b-button
-          class="mt-4 mb-4"
-          tag="router-link"
-          to="/clothing/add"
-          type="is-link"
-        >
-          Add Clothing
-        </b-button>
         <Table :columnHeadings="columns" :data="garments">
           <template v-slot:actions="slotProps">
             <TableActions :slotProps="slotProps" />

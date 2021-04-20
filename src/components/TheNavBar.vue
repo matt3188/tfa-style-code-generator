@@ -1,26 +1,38 @@
 <template>
   <b-navbar>
     <template #brand>
-      <b-navbar-item tag="router-link" :to="{ path: '/' }">
-        <img src="@/assets/logo.png" alt="T&amp;F Sports Aparell"
-      /></b-navbar-item>
+      <b-navbar-item tag="router-link" :to="{ name: 'Home' }">
+        <img src="@/assets/logo.png" alt="T&amp;F Sports Aparell" />
+      </b-navbar-item>
     </template>
 
     <template #start v-if="$auth.isAuthenticated">
-      <b-navbar-item tag="router-link" :to="{ path: '/' }"> Home</b-navbar-item>
-      <b-navbar-item tag="router-link" :to="{ path: '/clothing' }">
-        Clothing
+      <b-navbar-item tag="router-link" :to="{ name: 'Home' }">
+        Home
       </b-navbar-item>
-      <b-navbar-item tag="router-link" :to="{ path: '/accessories' }">
-        Accessories
-      </b-navbar-item>
+      <b-navbar-dropdown label="Clothing">
+        <b-navbar-item tag="router-link" :to="{ name: 'Clothing' }">
+          View Clothing
+        </b-navbar-item>
+        <b-navbar-item tag="router-link" :to="{ name: 'Add Clothing' }">
+          Add Clothing
+        </b-navbar-item>
+      </b-navbar-dropdown>
+      <b-navbar-dropdown label="Accessories">
+        <b-navbar-item tag="router-link" :to="{ name: 'Accessories' }">
+          View Accessories
+        </b-navbar-item>
+        <b-navbar-item tag="router-link" :to="{ name: 'Add Accessory' }">
+          Add Accessories
+        </b-navbar-item>
+      </b-navbar-dropdown>
     </template>
 
     <template #end>
       <b-navbar-item tag="div">
         <b-button
-          type="is-primary"
           v-if="!$auth.isAuthenticated"
+          type="is-primary"
           @click="login"
         >
           Log in
@@ -34,12 +46,10 @@
 <script>
 export default {
   name: 'TheNavBar',
-
   methods: {
     login() {
       this.$auth.loginWithRedirect()
     },
-    // Log the user out
     logout() {
       this.$auth.logout({
         returnTo: window.location.href
