@@ -21,43 +21,21 @@
 import { mapState, mapGetters } from 'vuex'
 import Table from '@/components/Table'
 import TableActions from '@/components/TableActions'
+import { table } from '@/mixins/table'
 
 export default {
   name: 'Accessories',
   components: { TableActions, Table },
-  data() {
-    return {
-      columns: [
-        {
-          field: 'styleCode',
-          label: 'Style Code'
-        },
-        {
-          field: 'accessory',
-          label: 'Accessory'
-        },
-        {
-          field: 'club',
-          label: 'Club'
-        },
-        {
-          field: 'description',
-          label: 'Description'
-        },
-        {
-          field: 'season',
-          label: 'season'
-        },
-        {
-          field: 'year',
-          label: 'year'
-        }
-      ]
-    }
-  },
+  mixins: [table],
   computed: {
     ...mapState(['all']),
     ...mapGetters(['accessories'])
+  },
+  created() {
+    this.insertAt(this.columns, 1, {
+      field: 'accessory',
+      label: 'Accessory'
+    })
   }
 }
 </script>
