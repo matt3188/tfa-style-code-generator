@@ -5,9 +5,9 @@ export const mutations = {
     state.selections = {
       accessorySelected: { name: '', value: '' },
       categorySelected: { name: '', value: '' },
+      clubSelected: { name: '', value: '' },
       garmentSelected: { name: '', value: '' },
       seasonSelected: { name: '', value: '' },
-      clubSelected: { name: '', value: '' },
       yearSelected: { name: '', value: '' }
     }
   },

@@ -51,7 +51,7 @@ export const state = {
   ],
   clubs: [
     { name: 'Atlético Madrid', value: 'ADM' },
-    { name: 'Blackburn Rovers F.C.', value: 'BBR' }
+    { name: 'Blackburn Rovers F.C.', value: 'BBR' },
     { name: 'Brighton and Hove Albion', value: 'BHA' },
     { name: 'Burnley F.C.', value: 'BURN' },
     { name: 'Crystal Palace F.C.', value: 'CPFC' },
@@ -70,11 +70,11 @@ export const state = {
     { name: 'Southampton F.C.', value: 'STH' },
     { name: 'Sunderland A.F.C.', value: 'SUN' },
     { name: 'Tottenham Hotspur', value: 'THFC' },
-    { name: 'West Ham United', value: 'WHU' },
+    { name: 'West Ham United', value: 'WHU' }
   ],
   seasons: [
-    { name: 'Spring Summer', value: 'SS' },
-    { name: 'Autumn Winter', value: 'AW' }
+    { name: 'Spring/Summer', value: 'SS' },
+    { name: 'Autumn/Winter', value: 'AW' }
   ],
   years: [
     { name: '2021', value: '21' },
