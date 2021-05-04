@@ -6,6 +6,7 @@
           :columnHeadings="columns"
           :data="accessories"
           :loading="!accessories"
+          sort-icon-size="is-small"
         >
           <template v-slot:actions="slotProps">
             <TableActions :slotProps="slotProps" />

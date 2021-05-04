@@ -2,7 +2,12 @@
   <b-container>
     <b-columns>
       <b-column>
-        <Table :columnHeadings="columns" :data="garments" :loading="!garments">
+        <Table
+          :columnHeadings="columns"
+          :data="garments"
+          :loading="!garments"
+          sort-icon-size="is-small"
+        >
           <template v-slot:actions="slotProps">
             <TableActions :slotProps="slotProps" />
           </template>
