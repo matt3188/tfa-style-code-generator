@@ -47,7 +47,8 @@ export const state = {
     { name: 'Shirt', value: '9' },
     { name: 'Knitwear', value: '10' },
     { name: 'Pyjamas', value: '11' },
-    { name: 'Retro Shirt', value: '12' }
+    { name: 'Retro Shirt', value: '12' },
+    { name: 'Jackets / Outerwear', value: '13' }
   ],
   clubs: [
     { name: 'Atlético Madrid', value: 'ADM' },
