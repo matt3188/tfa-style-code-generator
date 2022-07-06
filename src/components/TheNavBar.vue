@@ -28,7 +28,7 @@
       </b-navbar-dropdown>
     </template>
 
-    <template #end>
+    <!-- <template #end>
       <b-navbar-item tag="div">
         <b-button
           v-if="!$auth.isAuthenticated"
@@ -39,7 +39,7 @@
         </b-button>
         <b-button v-else @click="logout">Log out</b-button>
       </b-navbar-item>
-    </template>
+    </template> -->
   </b-navbar>
 </template>
 
